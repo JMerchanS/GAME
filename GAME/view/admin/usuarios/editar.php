@@ -3,12 +3,16 @@
         <div class="col s12">
             <a href="<?php echo $_SESSION['home'] ?>admin/index" class="breadcrumb" title="Inicio">Inicio</a>
             <a href="<?php echo $_SESSION['home'] ?>admin/usuarios" class="breadcrumb" title="Partidas">Usuarios</a>
+            <?php if ($datos->id){?>
             <a href="<?php echo $_SESSION['home'] ?>admin/usuarios/editar" class="breadcrumb" title="Partidas">Editar <?php echo $datos->usuario ?></a>
+            <?php } else { ?>
+                <a href="<?php echo $_SESSION['home'] ?>admin/usuarios/editar" class="breadcrumb" title="Partidas">Nuevo usuario <?php echo $datos->usuario ?></a>
+            <?php } ?>
         </div>
     </div>
 </nav>
 <div class="row" style="background-color: #1b4b72">
-    <?php $id = ($datos->id)?>
+    <?php $id = ($datos->id) ? $datos->id : "nuevo"?>
     <form class="col m12 l6" method="POST" enctype="multipart/form-data" action="<?php echo $_SESSION['home'] ?>admin/usuarios/editar/<?php echo $id ?>">
         <div class="row">
             <div class="col s12">
