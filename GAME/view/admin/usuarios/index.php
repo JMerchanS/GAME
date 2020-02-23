@@ -7,6 +7,23 @@
     </div>
 </nav>
 <div class="row">
+    <!--Nuevo-->
+    <article class="col s12 l6">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                    <img src="../../../public/img/37943.png">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red" href="<?php echo $_SESSION['home']."admin/usuarios/crear" ?>" title="Editar"><i class="material-icons">add</i></a>
+                </div>
+                    <div class="card-content">
+                        <h4 class="grey-text">
+                            Nuevo usuario
+                        </h4>
+                    </div>
+            </div>
+        </div>
+    </article>
     <?php foreach ($datos as $row){ ?>
         <article class="col s12 l6">
             <div class="row">

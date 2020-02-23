@@ -86,6 +86,9 @@ switch ($ruta){
     case "admin/usuarios":
         controlador("usuarios")->index();
         break;
+    case "admin/usuarios/crear":
+        controlador("usuarios")->crear();
+        break;
     case (strpos($ruta,"admin/usuarios/editar/") === 0):
         controlador("usuarios")->editar(str_replace("admin/usuarios/editar/","",$ruta));
         break;
